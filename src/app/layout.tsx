@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { ErrorWrapper } from './error-wrapper';
 // import './styles.css';
 
 export const metadata: Metadata = {
@@ -21,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           <p>Header</p>
         </header>
-        {children}
+        <ErrorWrapper>{children}</ErrorWrapper>
         <footer
           style={{
             backgroundColor: 'ghostwhite',
